@@ -1,0 +1,8 @@
+HumanEval Benchmark Results for stub
+Generated: 2026-04-02T02:04:49.922506
+==================================================
+
+Pass@1:  0.00%
+Pass@10: 0.00%
+Pass@100: 0.00% (sample)
+Total Cases: 20

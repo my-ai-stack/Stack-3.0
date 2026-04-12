@@ -1,0 +1,87 @@
+# =============================================================================
+# Stack 2.9 Kubernetes ConfigMap
+# =============================================================================
+# Contains non-sensitive configuration for Stack 2.9 training/inference.
+# All values here can be viewed with: kubectl get configmap -n stack-29
+#
+# For secrets (tokens, API keys), use the Secret type (see secret.yaml).
+#
+# Usage:
+#   kubectl apply -f k8s/configmap.yaml --namespace=stack-29
+#
+# =============================================================================
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: stack-29-config
+  namespace: stack-29
+  labels:
+    app.kubernetes.io/name: stack-29
+    app.kubernetes.io/component: config
+data:
+  # Application
+  APP_MODE: "train"              # "train" or "inference"
+
+  # Model settings
+  MODEL_NAME: "Qwen/Qwen2.5-Coder-7B"
+  TRUST_REMOTE_CODE: "true"
+  MAX_SEQ_LENGTH: "8192"
+
+  # Quantization (4-bit for single GPU, 8-bit for better quality)
+  LOAD_IN_4BIT: "true"
+  LOAD_IN_8BIT: "false"
+  BNB_4BIT_COMPUTE_DTYPE: "bfloat16"
+  BNB_4BIT_QUANT_TYPE: "nf4"
+  BNB_4BIT_USE_DOUBLE_QUANT: "true"
+
+  # LoRA fine-tuning
+  LORA_RANK: "64"
+  LORA_ALPHA: "128"
+  LORA_DROPOUT: "0.05"
+  TARGET_MODULES: "q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj"
+
+  # Training hyperparameters
+  LEARNING_RATE: "1.0e-4"
+  NUM_TRAIN_EPOCHS: "3"
+  WARMUP_STEPS: "100"
+  WEIGHT_DECAY: "0.01"
+  GRADIENT_ACCUMULATION_STEPS: "16"
+  PER_DEVICE_TRAIN_BATCH_SIZE: "1"
+  PER_DEVICE_EVAL_BATCH_SIZE: "1"
+  GRADIENT_CHECKPOINTING: "true"
+  FP16: "false"
+  BF16: "true"
+  OPTIM: "paged_adamw_8bit"
+
+  # Checkpointing
+  SAVE_STEPS: "500"
+  EVAL_STEPS: "250"
+  LOGGING_STEPS: "10"
+  OUTPUT_DIR: "/outputs/adapters"
+  OVERWRITE_OUTPUT_DIR: "true"
+
+  # Data
+  DATASET_PATH: "/data/training-data/train.jsonl"
+  EVAL_PATH: "/data/training-data/eval.jsonl"
+  DATA_FORMAT: "chatml"
+  TRAIN_SPLIT: "0.9"
+  EVAL_SPLIT: "0.1"
+
+  # Paths
+  HF_HOME: "/data/hf_cache"
+  TRANSFORMERS_CACHE: "/data/hf_cache"
+  HF_DATASETS_CACHE: "/data/datasets_cache"
+
+  # Performance tuning
+  PYTORCH_CUDA_ALLOC_CONF: "max_split_size_mb=512"
+  CUDA_VISIBLE_DEVICES: "0"
+
+  # Misc
+  SEED: "42"
+  PUSH_TO_HUB: "false"
+  REMOVE_UNUSED_COLUMNS: "false"
+
+  # Inference server settings (used when APP_MODE=inference)
+  INFERENCE_PORT: "7860"
+  INFERENCE_HOST: "0.0.0.0"

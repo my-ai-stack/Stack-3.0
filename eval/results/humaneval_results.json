@@ -1,0 +1,177 @@
+{
+  "model": "stub",
+  "timestamp": "2026-04-02T02:04:49.922506",
+  "pass_at_1": 0.0,
+  "pass_at_10": 0.0,
+  "pass_at_100": 0.0,
+  "total_cases": 20,
+  "results": [
+    {
+      "task_id": "HumanEval/1",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/2",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/3",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/4",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/5",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/6",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/7",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/8",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/9",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/10",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/11",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/12",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/13",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/14",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/15",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/16",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/17",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/18",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/19",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    },
+    {
+      "task_id": "HumanEval/20",
+      "passed": false,
+      "generations": 10,
+      "correct_output": null,
+      "error": "All generations failed",
+      "execution_time": 0.0
+    }
+  ],
+  "metadata": {
+    "temperature_pass1": 0.2,
+    "temperature_pass10": 0.8,
+    "top_p": 0.95,
+    "timeout": 60,
+    "sample_size_pass100": 20
+  }
+}

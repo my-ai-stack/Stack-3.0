@@ -1,0 +1,114 @@
+# Extended Context Training Config for Stack 3.0
+# Extends context from 32K to 128K using YaRN-like RoPE scaling
+# Target: Qwen2.5-Coder-32B
+
+model_name: "Qwen/Qwen2.5-Coder-32B"
+trust_remote_code: true
+
+# ═══════════════════════════════════════════════════════════════
+# CONTEXT EXTENSION — RoPE Scaling
+# ═══════════════════════════════════════════════════════════════
+# Current: 32K (32768)
+# Target: 128K (131072) — 4x extension
+# Method: Linear RoPE scaling with fine-tuning
+
+max_position_embeddings: 131072  # 128K extended context
+original_max_position: 32768     # Native Qwen context
+
+# RoPE scaling config (Qwen2 native support)
+rope_scaling:
+  type: "linear"           # "linear" or "yarn" — linear tested for 4x
+  factor: 4.0              # 4x extension: 32768 → 131072
+
+rope_theta: 1000000.0      # Qwen's native base
+
+# ═══════════════════════════════════════════════════════════════
+# QUANTIZATION (T4/A100 compatible)
+# ═══════════════════════════════════════════════════════════════
+
+load_in_4bit: true
+load_in_8bit: false
+bnb_4bit_quant_type: "nf4"
+bnb_4bit_compute_dtype: "bfloat16"
+bnb_4bit_use_double_quant: true
+
+# ═══════════════════════════════════════════════════════════════
+# TRAINING SETTINGS
+# ═══════════════════════════════════════════════════════════════
+
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16     # Effective batch = 16
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+
+optim: "paged_adamw_32bit"
+learning_rate: 5.0e-5               # Lower LR for context extension fine-tune
+lr_scheduler_type: "cosine"
+warmup_ratio: 0.05
+max_grad_norm: 0.3
+
+num_train_epochs: 3
+max_steps: -1
+
+logging_steps: 10
+save_steps: 500
+eval_steps: 500
+save_total_limit: 3
+
+# ═══════════════════════════════════════════════════════════════
+# LoRA FOR CONTEXT EXTENSION
+# ═══════════════════════════════════════════════════════════════
+
+lora_config:
+  r: 64
+  lora_alpha: 128
+  lora_dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+
+# ═══════════════════════════════════════════════════════════════
+# DATA FOR CONTEXT EXTENSION
+# ═══════════════════════════════════════════════════════════════
+# Needs long-context data (128K+ sequences)
+# Use: code repos, long documents, multi-file contexts
+
+dataset_path: "./training-data/final/train.jsonl"
+validation_split_ratio: 0.1
+max_examples: -1
+
+# Format
+text_field: "text"
+dataset_format: "jsonl"
+
+# ═══════════════════════════════════════════════════════════════
+# MIXED PRECISION
+# ═══════════════════════════════════════════════════════════════
+
+fp16: false
+bf16: true
+
+# ═══════════════════════════════════════════════════════════════
+# OUTPUT
+# ═══════════════════════════════════════════════════════════════
+
+output_dir: "./output/stack-3.0-128k-context"
+run_name: "stack-3.0-128k-context"
+
+push_to_hub: false
+use_cache: false
+remove_unused_columns: false
+
+# ═══════════════════════════════════════════════════════════════
+# MEMORY OPTIMIZATION
+# ═══════════════════════════════════════════════════════════════
+
+empty_step_interval: 100

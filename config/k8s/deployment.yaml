@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stack-30
+  namespace: stack-30
+  labels:
+    app: stack-30
+    version: v1
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: stack-30
+  template:
+    metadata:
+      labels:
+        app: stack-30
+        version: v1
+      annotations:
+        nvidia.com/gpu.count: "4" # Adjusted for 32B Pro model support
+        nvidia.com/gpu.product: "NVIDIA-A100-80GB"
+    spec:
+      nodeSelector:
+        nvidia.com/gpu.present: "true"
+      tolerations:
+        - key: "nvidia.com/gpu"
+          operator: "Exists"
+          effect: "NoSchedule"
+      terminationGracePeriodSeconds: 120
+      containers:
+        - name: stack-30
+          image: ghcr.io/walidsobhie-code/ai-voice-clone:latest
+          imagePullPolicy: Always
+          env:
+            - name: HF_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: stack-30-secrets
+                  key: HF_TOKEN
+            - name: MODEL_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: stack-30-config
+                  key: MODEL_NAME
+            - name: PYTORCH_CUDA_ALLOC_CONF
+              value: "max_split_size_mb=512,garbage_collection_threshold=0.8"
+            - name: CUDA_VISIBLE_DEVICES
+              value: "0,1,2,3"
+            - name: USE_FLASH_ATTENTION_2
+              value: "true"
+            - name: CONTEXT_WINDOW
+              value: "256000"
+          command:
+            - python
+            - -m
+            - stack_3_0_training.train_lora
+            - --config
+            - /config/train_config.yaml
+          ports:
+            - name: http
+              containerPort: 7860
+              protocol: TCP
+          resources:
+            limits:
+              nvidia.com/gpu: "4" # A100 80GB x 4 for 32B Pro
+              memory: "256Gi"
+              cpu: "16"
+            requests:
+              nvidia.com/gpu: "4" # Ensuring dedicated 80GB GPUs for performance
+              memory: "128Gi"
+              cpu: "8"
+          volumeMounts:
+            - name: config
+              mountPath: /config
+              readOnly: true
+            - name: models-cache
+              mountPath: /data
+            - name: outputs
+              mountPath: /outputs
+          envFrom:
+            - configMapRef:
+                name: stack-30-config
+      volumes:
+        - name: config
+          configMap:
+            name: stack-30-config
+        - name: models-cache
+          persistentVolumeClaim:
+            claimName: stack-30-models
+        - name: outputs
+          persistentVolumeClaim:
+            claimName: stack-30-outputs

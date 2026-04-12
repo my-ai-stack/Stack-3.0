@@ -1,0 +1,80 @@
+# =============================================================================
+# Stack 3.0 Kubernetes Service
+# =============================================================================
+# Exposes the Stack 3.0 inference server (Gradio/FastAPI) via LoadBalancer.
+# For training deployments this is typically not needed, but included for
+# inference mode and for accessing tensorboard/monitoring.
+#
+# Usage:
+#   kubectl apply -f k8s/service.yaml --namespace=stack-30
+#
+# Note: Training deployments usually don't expose a service - logs are
+# streamed via kubectl logs. This service is primarily for inference mode.
+#
+# =============================================================================
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: stack-30
+  namespace: stack-30
+  labels:
+    app: stack-30
+  annotations:
+    # For cloud providers, set the load balancer to target port 7860
+    # cloud.google.com/load-balancer-type: "External"
+spec:
+  type: LoadBalancer       # Use 'ClusterIP' for internal-only, 'NodePort' for simple exposure
+  ports:
+    - name: http
+      port: 7860          # External port (load balancer port)
+      targetPort: 7860    # Container port (defined in deployment)
+      protocol: TCP
+
+  # For inference, route to the correct pods
+  selector:
+    app: stack-30
+
+  # Preserve client IP for rate limiting / auth
+  # externalTrafficPolicy: Cluster
+  # sessionAffinity: ClientIP
+
+---
+# Additional service for training metrics (e.g., MLflow, TensorBoard)
+# Uncomment if you add sidecar containers for monitoring
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: stack-30-metrics
+#   namespace: stack-30
+#   labels:
+#     app: stack-30
+#     component: metrics
+# spec:
+#   type: ClusterIP
+#   ports:
+#     - name: tensorboard
+#       port: 6006
+#       targetPort: 6006
+#       protocol: TCP
+#   selector:
+#     app: stack-30
+
+---
+# Headless service for pod discovery (useful for distributed training)
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: stack-30-headless
+#   namespace: stack-30
+#   labels:
+#     app: stack-30
+# spec:
+#   clusterIP: None        # Headless - no ClusterIP
+#   ports:
+#     - name: ssh
+#       port: 22
+#       targetPort: 22
+#       protocol: TCP
+#   selector:
+#     app: stack-30

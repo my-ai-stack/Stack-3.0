@@ -1,0 +1,1539 @@
+[
+  {
+    "test_id": "AgentTool_1442",
+    "prompt": "Use AgentTool to do something",
+    "expected_tool": "AgentTool",
+    "expected_params": {},
+    "tool_description": "Format one agent line for the agent_listing_delta attachment message:\n`- type: whenToUse (Tools: ...)`.",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "AgentTool_9133",
+    "prompt": "Call AgentTool",
+    "expected_tool": "AgentTool",
+    "expected_params": {},
+    "tool_description": "Format one agent line for the agent_listing_delta attachment message:\n`- type: whenToUse (Tools: ...)`.",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "AgentTool_5334",
+    "prompt": "Use AgentTool to do something",
+    "expected_tool": "AgentTool",
+    "expected_params": {},
+    "tool_description": "Format one agent line for the agent_listing_delta attachment message:\n`- type: whenToUse (Tools: ...)`.",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "AgentTool_7066",
+    "prompt": "Call AgentTool",
+    "expected_tool": "AgentTool",
+    "expected_params": {},
+    "tool_description": "Format one agent line for the agent_listing_delta attachment message:\n`- type: whenToUse (Tools: ...)`.",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "AgentTool_5142",
+    "prompt": "Call AgentTool",
+    "expected_tool": "AgentTool",
+    "expected_params": {},
+    "tool_description": "Format one agent line for the agent_listing_delta attachment message:\n`- type: whenToUse (Tools: ...)`.",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "AskUserQuestionTool_8221",
+    "prompt": "Execute AskUserQuestionTool",
+    "expected_tool": "AskUserQuestionTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "AskUserQuestionTool_8297",
+    "prompt": "Call AskUserQuestionTool",
+    "expected_tool": "AskUserQuestionTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "AskUserQuestionTool_1059",
+    "prompt": "Call AskUserQuestionTool",
+    "expected_tool": "AskUserQuestionTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "AskUserQuestionTool_7626",
+    "prompt": "Call AskUserQuestionTool",
+    "expected_tool": "AskUserQuestionTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "AskUserQuestionTool_5238",
+    "prompt": "Call AskUserQuestionTool",
+    "expected_tool": "AskUserQuestionTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "BashTool_5334",
+    "prompt": "Please run npm test",
+    "expected_tool": "BashTool",
+    "expected_params": {
+      "command": "npm test"
+    },
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "BashTool_8558",
+    "prompt": "Run: git status",
+    "expected_tool": "BashTool",
+    "expected_params": {
+      "command": "git status"
+    },
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "BashTool_8252",
+    "prompt": "Execute npm test",
+    "expected_tool": "BashTool",
+    "expected_params": {
+      "command": "npm test"
+    },
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "BashTool_4920",
+    "prompt": "Run: make build",
+    "expected_tool": "BashTool",
+    "expected_params": {
+      "command": "make build"
+    },
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "BashTool_6768",
+    "prompt": "Please run ls -la",
+    "expected_tool": "BashTool",
+    "expected_params": {
+      "command": "ls -la"
+    },
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "BriefTool_3514",
+    "prompt": "Execute BriefTool",
+    "expected_tool": "BriefTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "BriefTool_2493",
+    "prompt": "Call BriefTool",
+    "expected_tool": "BriefTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "BriefTool_3819",
+    "prompt": "Use BriefTool to do something",
+    "expected_tool": "BriefTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "BriefTool_8934",
+    "prompt": "Call BriefTool",
+    "expected_tool": "BriefTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "BriefTool_1272",
+    "prompt": "Use BriefTool to do something",
+    "expected_tool": "BriefTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ConfigTool_6666",
+    "prompt": "Execute ConfigTool",
+    "expected_tool": "ConfigTool",
+    "expected_params": {},
+    "tool_description": "Generate the prompt documentation from the registry",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "ConfigTool_6890",
+    "prompt": "Use ConfigTool to do something",
+    "expected_tool": "ConfigTool",
+    "expected_params": {},
+    "tool_description": "Generate the prompt documentation from the registry",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "ConfigTool_7721",
+    "prompt": "Call ConfigTool",
+    "expected_tool": "ConfigTool",
+    "expected_params": {},
+    "tool_description": "Generate the prompt documentation from the registry",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ConfigTool_4292",
+    "prompt": "Call ConfigTool",
+    "expected_tool": "ConfigTool",
+    "expected_params": {},
+    "tool_description": "Generate the prompt documentation from the registry",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ConfigTool_1324",
+    "prompt": "Call ConfigTool",
+    "expected_tool": "ConfigTool",
+    "expected_params": {},
+    "tool_description": "Generate the prompt documentation from the registry",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "EnterPlanModeTool_8599",
+    "prompt": "Call EnterPlanModeTool",
+    "expected_tool": "EnterPlanModeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "EnterPlanModeTool_3574",
+    "prompt": "Call EnterPlanModeTool",
+    "expected_tool": "EnterPlanModeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "EnterPlanModeTool_9203",
+    "prompt": "Execute EnterPlanModeTool",
+    "expected_tool": "EnterPlanModeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "EnterPlanModeTool_9218",
+    "prompt": "Call EnterPlanModeTool",
+    "expected_tool": "EnterPlanModeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "EnterPlanModeTool_2127",
+    "prompt": "Call EnterPlanModeTool",
+    "expected_tool": "EnterPlanModeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "EnterWorktreeTool_7189",
+    "prompt": "Call EnterWorktreeTool",
+    "expected_tool": "EnterWorktreeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "EnterWorktreeTool_8708",
+    "prompt": "Use EnterWorktreeTool to do something",
+    "expected_tool": "EnterWorktreeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "EnterWorktreeTool_4825",
+    "prompt": "Execute EnterWorktreeTool",
+    "expected_tool": "EnterWorktreeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "EnterWorktreeTool_6763",
+    "prompt": "Use EnterWorktreeTool to do something",
+    "expected_tool": "EnterWorktreeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "EnterWorktreeTool_6925",
+    "prompt": "Execute EnterWorktreeTool",
+    "expected_tool": "EnterWorktreeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ExitPlanModeTool_7793",
+    "prompt": "Use ExitPlanModeTool to do something",
+    "expected_tool": "ExitPlanModeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ExitPlanModeTool_2469",
+    "prompt": "Use ExitPlanModeTool to do something",
+    "expected_tool": "ExitPlanModeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "ExitPlanModeTool_8270",
+    "prompt": "Call ExitPlanModeTool",
+    "expected_tool": "ExitPlanModeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "ExitPlanModeTool_7710",
+    "prompt": "Call ExitPlanModeTool",
+    "expected_tool": "ExitPlanModeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "ExitPlanModeTool_8976",
+    "prompt": "Call ExitPlanModeTool",
+    "expected_tool": "ExitPlanModeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "ExitWorktreeTool_1725",
+    "prompt": "Use ExitWorktreeTool to do something",
+    "expected_tool": "ExitWorktreeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "ExitWorktreeTool_2783",
+    "prompt": "Use ExitWorktreeTool to do something",
+    "expected_tool": "ExitWorktreeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "ExitWorktreeTool_5194",
+    "prompt": "Use ExitWorktreeTool to do something",
+    "expected_tool": "ExitWorktreeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ExitWorktreeTool_7674",
+    "prompt": "Execute ExitWorktreeTool",
+    "expected_tool": "ExitWorktreeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "ExitWorktreeTool_1423",
+    "prompt": "Call ExitWorktreeTool",
+    "expected_tool": "ExitWorktreeTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "FileEditTool_3126",
+    "prompt": "Execute FileEditTool",
+    "expected_tool": "FileEditTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "FileEditTool_7681",
+    "prompt": "Use FileEditTool to do something",
+    "expected_tool": "FileEditTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "FileEditTool_2291",
+    "prompt": "Call FileEditTool",
+    "expected_tool": "FileEditTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "FileEditTool_6300",
+    "prompt": "Execute FileEditTool",
+    "expected_tool": "FileEditTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "FileEditTool_9155",
+    "prompt": "Execute FileEditTool",
+    "expected_tool": "FileEditTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "FileReadTool_5478",
+    "prompt": "Read README.md",
+    "expected_tool": "FileReadTool",
+    "expected_params": {
+      "file_path": "README.md"
+    },
+    "tool_description": "Renders the Read tool prompt template.  The caller (FileReadTool) supplies\nthe runtime-computed parts.",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "FileReadTool_2066",
+    "prompt": "Show me the contents of src/main.py",
+    "expected_tool": "FileReadTool",
+    "expected_params": {
+      "file_path": "src/main.py"
+    },
+    "tool_description": "Renders the Read tool prompt template.  The caller (FileReadTool) supplies\nthe runtime-computed parts.",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "FileReadTool_2018",
+    "prompt": "Show me the contents of config.yaml",
+    "expected_tool": "FileReadTool",
+    "expected_params": {
+      "file_path": "config.yaml"
+    },
+    "tool_description": "Renders the Read tool prompt template.  The caller (FileReadTool) supplies\nthe runtime-computed parts.",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "FileReadTool_7683",
+    "prompt": "Show me the contents of tests/test_api.py",
+    "expected_tool": "FileReadTool",
+    "expected_params": {
+      "file_path": "tests/test_api.py"
+    },
+    "tool_description": "Renders the Read tool prompt template.  The caller (FileReadTool) supplies\nthe runtime-computed parts.",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "FileReadTool_4435",
+    "prompt": "Show me the contents of README.md",
+    "expected_tool": "FileReadTool",
+    "expected_params": {
+      "file_path": "README.md"
+    },
+    "tool_description": "Renders the Read tool prompt template.  The caller (FileReadTool) supplies\nthe runtime-computed parts.",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "FileWriteTool_3729",
+    "prompt": "Create a new file README.md with content: console.log('test');",
+    "expected_tool": "FileWriteTool",
+    "expected_params": {
+      "file_path": "README.md",
+      "content": "console.log('test');"
+    },
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "FileWriteTool_2575",
+    "prompt": "Create a new file config.yaml with content: console.log('test');",
+    "expected_tool": "FileWriteTool",
+    "expected_params": {
+      "file_path": "config.yaml",
+      "content": "console.log('test');"
+    },
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "FileWriteTool_7630",
+    "prompt": "Write this to src/main.py: console.log('test');",
+    "expected_tool": "FileWriteTool",
+    "expected_params": {
+      "file_path": "src/main.py",
+      "content": "console.log('test');"
+    },
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "FileWriteTool_6387",
+    "prompt": "Save the following as README.md: console.log('test');",
+    "expected_tool": "FileWriteTool",
+    "expected_params": {
+      "file_path": "README.md",
+      "content": "console.log('test');"
+    },
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "FileWriteTool_1230",
+    "prompt": "Save the following as src/index.js: console.log('test');",
+    "expected_tool": "FileWriteTool",
+    "expected_params": {
+      "file_path": "src/index.js",
+      "content": "console.log('test');"
+    },
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "GlobTool_9441",
+    "prompt": "Find all **/*.py files",
+    "expected_tool": "GlobTool",
+    "expected_params": {
+      "pattern": "**/*.py"
+    },
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "GlobTool_6788",
+    "prompt": "List files matching **/*.test.*",
+    "expected_tool": "GlobTool",
+    "expected_params": {
+      "pattern": "**/*.test.*"
+    },
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "GlobTool_5774",
+    "prompt": "Find all **/*.md files",
+    "expected_tool": "GlobTool",
+    "expected_params": {
+      "pattern": "**/*.md"
+    },
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "GlobTool_8080",
+    "prompt": "Search for files like src/**/*.ts",
+    "expected_tool": "GlobTool",
+    "expected_params": {
+      "pattern": "src/**/*.ts"
+    },
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "GlobTool_8749",
+    "prompt": "Search for files like **/*.py",
+    "expected_tool": "GlobTool",
+    "expected_params": {
+      "pattern": "**/*.py"
+    },
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "GrepTool_5985",
+    "prompt": "Search for **/*.js in lib",
+    "expected_tool": "GrepTool",
+    "expected_params": {
+      "pattern": "**/*.js",
+      "directory": "lib"
+    },
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "GrepTool_8524",
+    "prompt": "Locate **/*.test.* in the codebase",
+    "expected_tool": "GrepTool",
+    "expected_params": {
+      "pattern": "**/*.test.*"
+    },
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "GrepTool_1452",
+    "prompt": "Locate src/**/*.ts in the codebase",
+    "expected_tool": "GrepTool",
+    "expected_params": {
+      "pattern": "src/**/*.ts"
+    },
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "GrepTool_5666",
+    "prompt": "Search for **/*.md in tests",
+    "expected_tool": "GrepTool",
+    "expected_params": {
+      "pattern": "**/*.md",
+      "directory": "tests"
+    },
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "GrepTool_4387",
+    "prompt": "Find all lib/**/*.py",
+    "expected_tool": "GrepTool",
+    "expected_params": {
+      "pattern": "lib/**/*.py"
+    },
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "LSPTool_6162",
+    "prompt": "Execute LSPTool",
+    "expected_tool": "LSPTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "LSPTool_4317",
+    "prompt": "Execute LSPTool",
+    "expected_tool": "LSPTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "LSPTool_6968",
+    "prompt": "Call LSPTool",
+    "expected_tool": "LSPTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "LSPTool_3243",
+    "prompt": "Call LSPTool",
+    "expected_tool": "LSPTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "LSPTool_8575",
+    "prompt": "Call LSPTool",
+    "expected_tool": "LSPTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "ListMcpResourcesTool_7113",
+    "prompt": "Call ListMcpResourcesTool",
+    "expected_tool": "ListMcpResourcesTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ListMcpResourcesTool_4269",
+    "prompt": "Execute ListMcpResourcesTool",
+    "expected_tool": "ListMcpResourcesTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ListMcpResourcesTool_9727",
+    "prompt": "Execute ListMcpResourcesTool",
+    "expected_tool": "ListMcpResourcesTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ListMcpResourcesTool_3347",
+    "prompt": "Execute ListMcpResourcesTool",
+    "expected_tool": "ListMcpResourcesTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "ListMcpResourcesTool_7536",
+    "prompt": "Call ListMcpResourcesTool",
+    "expected_tool": "ListMcpResourcesTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "MCPTool_6306",
+    "prompt": "Call MCPTool",
+    "expected_tool": "MCPTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "MCPTool_2877",
+    "prompt": "Use MCPTool to do something",
+    "expected_tool": "MCPTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "MCPTool_1314",
+    "prompt": "Execute MCPTool",
+    "expected_tool": "MCPTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "MCPTool_3246",
+    "prompt": "Call MCPTool",
+    "expected_tool": "MCPTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "MCPTool_1594",
+    "prompt": "Call MCPTool",
+    "expected_tool": "MCPTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "NotebookEditTool_3700",
+    "prompt": "Call NotebookEditTool",
+    "expected_tool": "NotebookEditTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "NotebookEditTool_5392",
+    "prompt": "Execute NotebookEditTool",
+    "expected_tool": "NotebookEditTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "NotebookEditTool_4026",
+    "prompt": "Execute NotebookEditTool",
+    "expected_tool": "NotebookEditTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "NotebookEditTool_7197",
+    "prompt": "Execute NotebookEditTool",
+    "expected_tool": "NotebookEditTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "NotebookEditTool_8062",
+    "prompt": "Use NotebookEditTool to do something",
+    "expected_tool": "NotebookEditTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "PowerShellTool_3052",
+    "prompt": "Call PowerShellTool",
+    "expected_tool": "PowerShellTool",
+    "expected_params": {},
+    "tool_description": "Version-specific syntax guidance. The model's training data covers both\neditions but it can't tell which one it's targeting, so it either emits\npwsh-7 syntax on 5.1 (parser error \u2192 exit 1) or needlessly avoids && on 7.",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "PowerShellTool_1988",
+    "prompt": "Use PowerShellTool to do something",
+    "expected_tool": "PowerShellTool",
+    "expected_params": {},
+    "tool_description": "Version-specific syntax guidance. The model's training data covers both\neditions but it can't tell which one it's targeting, so it either emits\npwsh-7 syntax on 5.1 (parser error \u2192 exit 1) or needlessly avoids && on 7.",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "PowerShellTool_5390",
+    "prompt": "Call PowerShellTool",
+    "expected_tool": "PowerShellTool",
+    "expected_params": {},
+    "tool_description": "Version-specific syntax guidance. The model's training data covers both\neditions but it can't tell which one it's targeting, so it either emits\npwsh-7 syntax on 5.1 (parser error \u2192 exit 1) or needlessly avoids && on 7.",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "PowerShellTool_5212",
+    "prompt": "Execute PowerShellTool",
+    "expected_tool": "PowerShellTool",
+    "expected_params": {},
+    "tool_description": "Version-specific syntax guidance. The model's training data covers both\neditions but it can't tell which one it's targeting, so it either emits\npwsh-7 syntax on 5.1 (parser error \u2192 exit 1) or needlessly avoids && on 7.",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "PowerShellTool_7271",
+    "prompt": "Use PowerShellTool to do something",
+    "expected_tool": "PowerShellTool",
+    "expected_params": {},
+    "tool_description": "Version-specific syntax guidance. The model's training data covers both\neditions but it can't tell which one it's targeting, so it either emits\npwsh-7 syntax on 5.1 (parser error \u2192 exit 1) or needlessly avoids && on 7.",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "ReadMcpResourceTool_2705",
+    "prompt": "Execute ReadMcpResourceTool",
+    "expected_tool": "ReadMcpResourceTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ReadMcpResourceTool_2891",
+    "prompt": "Call ReadMcpResourceTool",
+    "expected_tool": "ReadMcpResourceTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "ReadMcpResourceTool_7780",
+    "prompt": "Execute ReadMcpResourceTool",
+    "expected_tool": "ReadMcpResourceTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "ReadMcpResourceTool_2602",
+    "prompt": "Use ReadMcpResourceTool to do something",
+    "expected_tool": "ReadMcpResourceTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ReadMcpResourceTool_3579",
+    "prompt": "Use ReadMcpResourceTool to do something",
+    "expected_tool": "ReadMcpResourceTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "RemoteTriggerTool_1621",
+    "prompt": "Call RemoteTriggerTool",
+    "expected_tool": "RemoteTriggerTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "RemoteTriggerTool_1093",
+    "prompt": "Call RemoteTriggerTool",
+    "expected_tool": "RemoteTriggerTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "RemoteTriggerTool_2536",
+    "prompt": "Execute RemoteTriggerTool",
+    "expected_tool": "RemoteTriggerTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "RemoteTriggerTool_5464",
+    "prompt": "Use RemoteTriggerTool to do something",
+    "expected_tool": "RemoteTriggerTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "RemoteTriggerTool_6075",
+    "prompt": "Use RemoteTriggerTool to do something",
+    "expected_tool": "RemoteTriggerTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "ScheduleCronTool_4909",
+    "prompt": "Execute ScheduleCronTool",
+    "expected_tool": "ScheduleCronTool",
+    "expected_params": {},
+    "tool_description": "Unified gate for the cron scheduling system. Combines the build-time\n`feature('AGENT_TRIGGERS')` flag (dead code elimination) with the runtime\n`tengu_kairos_cron` GrowthBook gate on a 5-minute refresh window.\n\nAGENT_TRIGGERS is independently shippable from KAIROS \u2014 the cron module\ngraph (cronSchedul",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "ScheduleCronTool_6081",
+    "prompt": "Use ScheduleCronTool to do something",
+    "expected_tool": "ScheduleCronTool",
+    "expected_params": {},
+    "tool_description": "Unified gate for the cron scheduling system. Combines the build-time\n`feature('AGENT_TRIGGERS')` flag (dead code elimination) with the runtime\n`tengu_kairos_cron` GrowthBook gate on a 5-minute refresh window.\n\nAGENT_TRIGGERS is independently shippable from KAIROS \u2014 the cron module\ngraph (cronSchedul",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ScheduleCronTool_6686",
+    "prompt": "Call ScheduleCronTool",
+    "expected_tool": "ScheduleCronTool",
+    "expected_params": {},
+    "tool_description": "Unified gate for the cron scheduling system. Combines the build-time\n`feature('AGENT_TRIGGERS')` flag (dead code elimination) with the runtime\n`tengu_kairos_cron` GrowthBook gate on a 5-minute refresh window.\n\nAGENT_TRIGGERS is independently shippable from KAIROS \u2014 the cron module\ngraph (cronSchedul",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ScheduleCronTool_5952",
+    "prompt": "Execute ScheduleCronTool",
+    "expected_tool": "ScheduleCronTool",
+    "expected_params": {},
+    "tool_description": "Unified gate for the cron scheduling system. Combines the build-time\n`feature('AGENT_TRIGGERS')` flag (dead code elimination) with the runtime\n`tengu_kairos_cron` GrowthBook gate on a 5-minute refresh window.\n\nAGENT_TRIGGERS is independently shippable from KAIROS \u2014 the cron module\ngraph (cronSchedul",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "ScheduleCronTool_3141",
+    "prompt": "Execute ScheduleCronTool",
+    "expected_tool": "ScheduleCronTool",
+    "expected_params": {},
+    "tool_description": "Unified gate for the cron scheduling system. Combines the build-time\n`feature('AGENT_TRIGGERS')` flag (dead code elimination) with the runtime\n`tengu_kairos_cron` GrowthBook gate on a 5-minute refresh window.\n\nAGENT_TRIGGERS is independently shippable from KAIROS \u2014 the cron module\ngraph (cronSchedul",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "SendMessageTool_7741",
+    "prompt": "Call SendMessageTool",
+    "expected_tool": "SendMessageTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "SendMessageTool_4050",
+    "prompt": "Execute SendMessageTool",
+    "expected_tool": "SendMessageTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "SendMessageTool_5206",
+    "prompt": "Execute SendMessageTool",
+    "expected_tool": "SendMessageTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "SendMessageTool_9082",
+    "prompt": "Execute SendMessageTool",
+    "expected_tool": "SendMessageTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "SendMessageTool_5311",
+    "prompt": "Call SendMessageTool",
+    "expected_tool": "SendMessageTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "SkillTool_7072",
+    "prompt": "Call SkillTool",
+    "expected_tool": "SkillTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "SkillTool_7411",
+    "prompt": "Use SkillTool to do something",
+    "expected_tool": "SkillTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "SkillTool_9504",
+    "prompt": "Execute SkillTool",
+    "expected_tool": "SkillTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "SkillTool_9091",
+    "prompt": "Execute SkillTool",
+    "expected_tool": "SkillTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "SkillTool_8646",
+    "prompt": "Use SkillTool to do something",
+    "expected_tool": "SkillTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "SleepTool_2251",
+    "prompt": "Execute SleepTool",
+    "expected_tool": "SleepTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "SleepTool_6839",
+    "prompt": "Use SleepTool to do something",
+    "expected_tool": "SleepTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "SleepTool_6919",
+    "prompt": "Use SleepTool to do something",
+    "expected_tool": "SleepTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "SleepTool_5972",
+    "prompt": "Execute SleepTool",
+    "expected_tool": "SleepTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "SleepTool_3416",
+    "prompt": "Execute SleepTool",
+    "expected_tool": "SleepTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TaskCreateTool_6455",
+    "prompt": "Call TaskCreateTool",
+    "expected_tool": "TaskCreateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TaskCreateTool_1883",
+    "prompt": "Use TaskCreateTool to do something",
+    "expected_tool": "TaskCreateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TaskCreateTool_4722",
+    "prompt": "Call TaskCreateTool",
+    "expected_tool": "TaskCreateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TaskCreateTool_5107",
+    "prompt": "Use TaskCreateTool to do something",
+    "expected_tool": "TaskCreateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TaskCreateTool_9309",
+    "prompt": "Call TaskCreateTool",
+    "expected_tool": "TaskCreateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TaskGetTool_2106",
+    "prompt": "Call TaskGetTool",
+    "expected_tool": "TaskGetTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TaskGetTool_7353",
+    "prompt": "Execute TaskGetTool",
+    "expected_tool": "TaskGetTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TaskGetTool_5818",
+    "prompt": "Execute TaskGetTool",
+    "expected_tool": "TaskGetTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TaskGetTool_8987",
+    "prompt": "Call TaskGetTool",
+    "expected_tool": "TaskGetTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TaskGetTool_1243",
+    "prompt": "Call TaskGetTool",
+    "expected_tool": "TaskGetTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TaskListTool_2131",
+    "prompt": "Use TaskListTool to do something",
+    "expected_tool": "TaskListTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TaskListTool_6609",
+    "prompt": "Call TaskListTool",
+    "expected_tool": "TaskListTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TaskListTool_8918",
+    "prompt": "Use TaskListTool to do something",
+    "expected_tool": "TaskListTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TaskListTool_3153",
+    "prompt": "Execute TaskListTool",
+    "expected_tool": "TaskListTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TaskListTool_9305",
+    "prompt": "Use TaskListTool to do something",
+    "expected_tool": "TaskListTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TaskOutputTool_9136",
+    "prompt": "Use TaskOutputTool to do something",
+    "expected_tool": "TaskOutputTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TaskOutputTool_6266",
+    "prompt": "Use TaskOutputTool to do something",
+    "expected_tool": "TaskOutputTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TaskOutputTool_1758",
+    "prompt": "Call TaskOutputTool",
+    "expected_tool": "TaskOutputTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TaskOutputTool_5708",
+    "prompt": "Call TaskOutputTool",
+    "expected_tool": "TaskOutputTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TaskOutputTool_6261",
+    "prompt": "Execute TaskOutputTool",
+    "expected_tool": "TaskOutputTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TaskStopTool_1356",
+    "prompt": "Call TaskStopTool",
+    "expected_tool": "TaskStopTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TaskStopTool_9732",
+    "prompt": "Execute TaskStopTool",
+    "expected_tool": "TaskStopTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TaskStopTool_5560",
+    "prompt": "Call TaskStopTool",
+    "expected_tool": "TaskStopTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TaskStopTool_1508",
+    "prompt": "Call TaskStopTool",
+    "expected_tool": "TaskStopTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TaskStopTool_1536",
+    "prompt": "Use TaskStopTool to do something",
+    "expected_tool": "TaskStopTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TaskUpdateTool_4080",
+    "prompt": "Execute TaskUpdateTool",
+    "expected_tool": "TaskUpdateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TaskUpdateTool_8394",
+    "prompt": "Execute TaskUpdateTool",
+    "expected_tool": "TaskUpdateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TaskUpdateTool_6087",
+    "prompt": "Call TaskUpdateTool",
+    "expected_tool": "TaskUpdateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TaskUpdateTool_9395",
+    "prompt": "Use TaskUpdateTool to do something",
+    "expected_tool": "TaskUpdateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TaskUpdateTool_5167",
+    "prompt": "Call TaskUpdateTool",
+    "expected_tool": "TaskUpdateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TeamCreateTool_9102",
+    "prompt": "Use TeamCreateTool to do something",
+    "expected_tool": "TeamCreateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TeamCreateTool_9269",
+    "prompt": "Call TeamCreateTool",
+    "expected_tool": "TeamCreateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TeamCreateTool_8424",
+    "prompt": "Use TeamCreateTool to do something",
+    "expected_tool": "TeamCreateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TeamCreateTool_8193",
+    "prompt": "Use TeamCreateTool to do something",
+    "expected_tool": "TeamCreateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TeamCreateTool_5576",
+    "prompt": "Call TeamCreateTool",
+    "expected_tool": "TeamCreateTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TeamDeleteTool_2955",
+    "prompt": "Execute TeamDeleteTool",
+    "expected_tool": "TeamDeleteTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TeamDeleteTool_6029",
+    "prompt": "Use TeamDeleteTool to do something",
+    "expected_tool": "TeamDeleteTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TeamDeleteTool_6039",
+    "prompt": "Execute TeamDeleteTool",
+    "expected_tool": "TeamDeleteTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TeamDeleteTool_4346",
+    "prompt": "Use TeamDeleteTool to do something",
+    "expected_tool": "TeamDeleteTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TeamDeleteTool_7920",
+    "prompt": "Call TeamDeleteTool",
+    "expected_tool": "TeamDeleteTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "TodoWriteTool_8435",
+    "prompt": "Use TodoWriteTool to do something",
+    "expected_tool": "TodoWriteTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TodoWriteTool_4402",
+    "prompt": "Use TodoWriteTool to do something",
+    "expected_tool": "TodoWriteTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TodoWriteTool_7554",
+    "prompt": "Execute TodoWriteTool",
+    "expected_tool": "TodoWriteTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "TodoWriteTool_3137",
+    "prompt": "Use TodoWriteTool to do something",
+    "expected_tool": "TodoWriteTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "TodoWriteTool_5772",
+    "prompt": "Call TodoWriteTool",
+    "expected_tool": "TodoWriteTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ToolSearchTool_4685",
+    "prompt": "Call ToolSearchTool",
+    "expected_tool": "ToolSearchTool",
+    "expected_params": {},
+    "tool_description": "Check if a tool should be deferred (requires ToolSearch to load).\nA tool is deferred if:\n- It's an MCP tool (always deferred - workflow-specific)\n- It has shouldDefer: true\n\nA tool is NEVER deferred if it has alwaysLoad: true (MCP tools set this via\n_meta['anthropic/alwaysLoad']). This check runs fi",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "ToolSearchTool_8253",
+    "prompt": "Use ToolSearchTool to do something",
+    "expected_tool": "ToolSearchTool",
+    "expected_params": {},
+    "tool_description": "Check if a tool should be deferred (requires ToolSearch to load).\nA tool is deferred if:\n- It's an MCP tool (always deferred - workflow-specific)\n- It has shouldDefer: true\n\nA tool is NEVER deferred if it has alwaysLoad: true (MCP tools set this via\n_meta['anthropic/alwaysLoad']). This check runs fi",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "ToolSearchTool_2353",
+    "prompt": "Call ToolSearchTool",
+    "expected_tool": "ToolSearchTool",
+    "expected_params": {},
+    "tool_description": "Check if a tool should be deferred (requires ToolSearch to load).\nA tool is deferred if:\n- It's an MCP tool (always deferred - workflow-specific)\n- It has shouldDefer: true\n\nA tool is NEVER deferred if it has alwaysLoad: true (MCP tools set this via\n_meta['anthropic/alwaysLoad']). This check runs fi",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "ToolSearchTool_5736",
+    "prompt": "Execute ToolSearchTool",
+    "expected_tool": "ToolSearchTool",
+    "expected_params": {},
+    "tool_description": "Check if a tool should be deferred (requires ToolSearch to load).\nA tool is deferred if:\n- It's an MCP tool (always deferred - workflow-specific)\n- It has shouldDefer: true\n\nA tool is NEVER deferred if it has alwaysLoad: true (MCP tools set this via\n_meta['anthropic/alwaysLoad']). This check runs fi",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "ToolSearchTool_8159",
+    "prompt": "Call ToolSearchTool",
+    "expected_tool": "ToolSearchTool",
+    "expected_params": {},
+    "tool_description": "Check if a tool should be deferred (requires ToolSearch to load).\nA tool is deferred if:\n- It's an MCP tool (always deferred - workflow-specific)\n- It has shouldDefer: true\n\nA tool is NEVER deferred if it has alwaysLoad: true (MCP tools set this via\n_meta['anthropic/alwaysLoad']). This check runs fi",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "WebFetchTool_8507",
+    "prompt": "Execute WebFetchTool",
+    "expected_tool": "WebFetchTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "WebFetchTool_2518",
+    "prompt": "Use WebFetchTool to do something",
+    "expected_tool": "WebFetchTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "WebFetchTool_7285",
+    "prompt": "Use WebFetchTool to do something",
+    "expected_tool": "WebFetchTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "WebFetchTool_4143",
+    "prompt": "Execute WebFetchTool",
+    "expected_tool": "WebFetchTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "WebFetchTool_2209",
+    "prompt": "Call WebFetchTool",
+    "expected_tool": "WebFetchTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "WebSearchTool_5308",
+    "prompt": "Use WebSearchTool to do something",
+    "expected_tool": "WebSearchTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "WebSearchTool_7978",
+    "prompt": "Use WebSearchTool to do something",
+    "expected_tool": "WebSearchTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "easy"
+  },
+  {
+    "test_id": "WebSearchTool_4077",
+    "prompt": "Use WebSearchTool to do something",
+    "expected_tool": "WebSearchTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  },
+  {
+    "test_id": "WebSearchTool_8521",
+    "prompt": "Use WebSearchTool to do something",
+    "expected_tool": "WebSearchTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "medium"
+  },
+  {
+    "test_id": "WebSearchTool_5236",
+    "prompt": "Execute WebSearchTool",
+    "expected_tool": "WebSearchTool",
+    "expected_params": {},
+    "tool_description": "",
+    "difficulty": "hard"
+  }
+]

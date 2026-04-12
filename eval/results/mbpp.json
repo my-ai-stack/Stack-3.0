@@ -1,0 +1,9 @@
+{
+  "model": "Stack 3.0 (estimate)",
+  "benchmark": "MBPP",
+  "pass@1": 0.8,
+  "pass@10": 0.85,
+  "pass@100": 0.88,
+  "note": "Estimate based on Qwen2.5-Coder-32B. Actual after training.",
+  "source": "Qwen2.5-Coder technical report"
+}

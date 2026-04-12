@@ -1,0 +1,107 @@
+# =============================================================================
+# Stack 3.0 GPU Dockerfile
+# Multi-stage build for NVIDIA GPU (CUDA 11.8 + cuDNN 8)
+# =============================================================================
+# Usage:
+#   Build:  docker build -f Dockerfile.gpu -t stack-3.0-gpu .
+#   Run:    docker compose -f docker-compose.gpu.yml up
+#   Or:     docker run --rm --gpus all -p 8000:8000 \
+#             -v /Users/walidsobhi/stack-3.0/base_model_32B_Pro:/model:ro \
+#             stack-3.0-gpu
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Stage 1: Builder
+# Install Python deps into a wheel, then discard the bulk of the build layer.
+# -----------------------------------------------------------------------------
+FROM python:3.11-slim AS builder
+
+WORKDIR /build
+
+# Install build dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        build-essential \
+        curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install PyTorch with CUDA 11.8 support (CPU fallback pip wheel works too)
+# Using PyPI index; for air-gapped envs, swap --index-url for a local mirror.
+RUN python -m venv /opt/venv \
+    && /opt/venv/bin/pip install --upgrade pip setuptools wheel
+
+# Install ML / inference deps
+COPY requirements_api.txt .
+RUN /opt/venv/bin/pip install --no-cache-dir -r requirements_api.txt
+
+# Install torch with CUDA support
+RUN /opt/venv/bin/pip install --no-cache-dir \
+        torch==2.1.2 \
+        torchvision==0.16.2 \
+        --index-url https://download.pytorch.org/whl/cu118
+
+# Install transformers ecosystem (GPU-ready builds)
+RUN /opt/venv/bin/pip install --no-cache-dir \
+        transformers==4.39.3 \
+        peft==0.10.0 \
+        accelerate==0.28.0 \
+        bitsandbytes==0.43.1 \
+        huggingface_hub>=0.21.0
+
+# -----------------------------------------------------------------------------
+# Stage 2: Runtime
+# Slim runtime image with CUDA libraries, running as non-root.
+# -----------------------------------------------------------------------------
+FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04 AS runtime
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    TRANSFORMERS_CACHE=/model/.cache \
+    HF_HOME=/model/.cache \
+    CUDA_VISIBLE_DEVICES=0,1,2,3 \
+    PORT=8000 \
+    HOST=0.0.0.0
+
+WORKDIR /app
+
+# Install runtime Python + basic utils (no compilers needed here)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        python3.11 \
+        python3.11-venv \
+        python3-pip \
+        curl \
+        git \
+    && rm -rf /var/lib/apt/lists/* \
+    && ln -sf python3.11 /usr/bin/python
+
+# Copy virtualenv from builder
+COPY --from=builder /opt/venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Create non-root user for security
+ARG UID=1000
+ARG GID=1000
+RUN groupadd --gid $GID stack && useradd --uid $UID --gid $GID --shell /bin/bash --create-home stack
+
+# Create model mount point
+RUN mkdir -p /model && chown stack:stack /model
+
+# Copy inference entrypoint
+COPY --chown=stack:stack inference_api.py .
+
+# Switch to non-root
+USER stack:stack
+
+# Healthcheck — confirm CUDA libraries are visible
+HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
+    CMD curl -sf http://localhost:${PORT}/health || exit 1
+
+EXPOSE ${PORT}
+
+# Model is expected to be mounted at /model at runtime.
+# Example: docker run -v /Users/walidsobhi/stack-3.0/base_model_32B_Pro:/model:ro stack-3.0-gpu
+ENV MODEL_PATH=/model
+
+ENTRYPOINT ["python", "inference_api.py"]
